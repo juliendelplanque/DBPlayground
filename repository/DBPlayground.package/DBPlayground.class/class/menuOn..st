@@ -8,5 +8,3 @@ menuOn: aBuilder
 			self new
 				adaptToConnectionsManager: DBConnectionsManager current;
 				openWithSpec ].
-		
-	aBuilder withSeparatorAfter
