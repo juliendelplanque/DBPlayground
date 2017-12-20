@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "ComposableModel",
+	"category" : "DBPlayground",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"menu",
+		"connectionsList",
+		"textEditor",
+		"resultsList"
+	],
+	"name" : "DBPlayground",
+	"type" : "normal"
+}
