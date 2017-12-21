@@ -7,9 +7,13 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"menu",
+		"connectionsListLabel",
 		"connectionsList",
+		"textEditorLabel",
 		"textEditor",
-		"resultsList"
+		"resultsListLabel",
+		"resultsList",
+		"inspectResultsButton"
 	],
 	"name" : "DBPlayground",
 	"type" : "normal"
