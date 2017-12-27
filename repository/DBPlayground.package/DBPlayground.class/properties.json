@@ -13,7 +13,8 @@
 		"textEditor",
 		"resultsListLabel",
 		"resultsList",
-		"inspectResultsButton"
+		"inspectResultsButton",
+		"syntaxHighlighter"
 	],
 	"name" : "DBPlayground",
 	"type" : "normal"

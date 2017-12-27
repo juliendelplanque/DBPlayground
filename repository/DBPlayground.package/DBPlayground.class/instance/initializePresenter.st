@@ -7,25 +7,24 @@ initializePresenter
 			group
 				addItem: [ :item | 
 					item
-						name: 'Run script' translated;
+						name: 'Run script';
 						icon: (self iconNamed: #glamorousGo);
 						action: [ self runScript ] ] ].
-				
+	
 	self connectionsListLabel
-		label: self class connectionsListLabel.
+		label: 'Connections:' translated.
 	
 	self textEditorLabel
 		label: 'Query editor:' translated.
 	self textEditor
-		autoAccept: true.
-	
+		autoAccept: true;
+		acceptBlock: [ :text | self syntaxHighlighter applyOn: text ].
+		
 	self resultsListLabel
-		label: 'Query results:' translated.
+		label: 'Results:' translated.
 	self resultsList
 		displayBlock: [ :row | row collect: #asString ];
 		items: #(('')).
 		
 	self inspectResultsButton
-		"label: 'Inspect results' translated;"
-		icon: (Smalltalk ui iconNamed: #glamorousInspect);
-		action: [ self resultsList getList inspect ]
+		icon: (Smalltalk ui iconNamed: #glamorousInspect)

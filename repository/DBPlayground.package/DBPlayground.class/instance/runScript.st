@@ -1,6 +1,6 @@
 running script
 runScript
-	| results |
+	| results rows |
 	self connectionsList selectedConnectionDescription ifNil: [ 
 		UIManager default alert: 'Please select a connection in the list.' title: 'Error'.
 		^ self ].
@@ -11,6 +11,6 @@ runScript
 		ifTrue: [ 
 			UIManager default alert: results errorResponse title: 'Error in script'.
 			^ self ].
-
+	rows := results rows.
 	resultsList
-		items: (results rows collect: [ :row | row collect: #asString ])
+		items: { rows first description columnDescriptions collect: #fieldName } , (rows collect: [ :row | row collect: #asString ])
